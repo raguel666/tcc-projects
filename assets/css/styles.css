@@ -236,5 +236,7 @@ img {
 }
 
 /* =========== Show Nav Menu =========== */
-
+.show-menu {
+	bottom: 0;
+}
 /* =========== Active Links =========== */
