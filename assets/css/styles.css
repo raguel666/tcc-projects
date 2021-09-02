@@ -685,7 +685,7 @@ img {
 	margin-bottom: var(--mb-1-5);
 }
 
-.services__model-close {
+.services__modal-close {
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
@@ -699,3 +699,8 @@ img {
 	margin-right: var(--mb-0-25);
 }
 /* =========== Active Modal =========== */
+
+.active-modal {
+	opacity: 1;
+	visibility: visible;
+}
