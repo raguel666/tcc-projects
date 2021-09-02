@@ -47,7 +47,7 @@ skillsHeader.forEach((el) => {
 
 /* =========== Qualification Tabs =========== */
 const tabs = document.querySelectorAll('[data-target]'),
-    tabContents = document.querySelectorAll('[data-content]')
+      tabContents = document.querySelectorAll('[data-content]')
 
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -70,6 +70,8 @@ const modalViews = document.querySelectorAll('.services__modal'),
       modalBtns = document.querySelectorAll('.services__button'),
       modalCloses = document.querySelectorAll('.services__modal-close')
 
+/* =========== Show Modal =========== */
+
 let modal = function (modalClick) {
     modalViews[modalClick].classList.add('active-modal')
 }
@@ -79,6 +81,8 @@ modalBtns.forEach((modalBtn, i) => {
         modal(i)
     })
 })
+
+/* =========== Remove Active Modal Class =========== */
 
 modalCloses.forEach((modalClose) => {
     modalClose.addEventListener('click', () =>{
