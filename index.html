@@ -8,6 +8,7 @@
     <!-- =========== Unicons =========== -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- =========== Swiper CSS =========== -->
+    <link rel="stylesheet" href="assets/css/swiper/swiper-bundle.min.css">
 
     <!-- =========== CSS =========== --> 
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -644,10 +645,10 @@
             <h2 class="section__title">Our Portfolio</h2>
             <span class="section__subtitle">Our Most Recent Work</span>
 
-            <div class="portfolio__container container">
-                <div>
+            <div class="portfolio__container container swiper">
+                <div class="swiper-wrapper">
                     <!-- =========== Portfolio 1 =========== -->
-                    <div class="portfolio__content grid">
+                    <div class="portfolio__content grid swiper-slide">
                         <img src="assets/images/about.jpg" alt="" class="portfolio__img">
 
                         <div class="portfolio__data">
@@ -660,8 +661,9 @@
                                 <i class="uil uil-arrow-right button__icon"></i>
                             </a>
                         </div>
+                    </div>
                         <!-- =========== Portfolio 2 =========== -->
-                    <div class="portfolio__content grid">
+                    <div class="portfolio__content grid swiper-slide">
                         <img src="assets/images/about.jpg" alt="" class="portfolio__img">
 
                         <div class="portfolio__data">
@@ -676,7 +678,7 @@
                         </div>
                     </div>
                     <!-- =========== Portfolio 3 =========== -->
-                    <div class="portfolio__content grid">
+                    <div class="portfolio__content grid swiper-slide">
                         <img src="assets/images/about.jpg" alt="" class="portfolio__img">
 
                         <div class="portfolio__data">
@@ -690,8 +692,9 @@
                             </a>
                         </div>
                     </div>
-                    </div>
                 </div>
+
+                <div class="swiper-pagination"></div>
             </div>
         </section>
 
@@ -711,6 +714,7 @@
     <!-- =========== Scroll To Top =========== -->
 
     <!-- =========== Swiper =========== -->
+    <script src="assets/js/swiper/swiper-bundle.min.js"></script>
 
     <!-- =========== Main JS =========== -->
     <script src="assets/js/main.js"></script>
