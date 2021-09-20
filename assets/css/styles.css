@@ -98,10 +98,9 @@ body.dark-theme {
 	cursor: pointer;
 }
 
-.chang-theme:hover {
+.change-theme:hover {
 	color: var(--first-color);
 }
-
 /* =========== Base CSS Code =========== */
 
 * {
@@ -579,6 +578,13 @@ img {
 /* - End of Skills Bars - */
 
 /* =========== Qualifications =========== */
+.qualification {
+	background: url('../images/circle-scatter-haikei.svg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .qualification__tabs {
 	display: flex;
 	justify-content: space-evenly;
