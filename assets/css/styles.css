@@ -844,6 +844,12 @@ img {
 }
 
 /* =========== Testimonials =========== */
+.testimonial__container {
+	position: relative;
+	width: 100%;
+	padding: 40px;
+}
+
 .testimonial__data,
 .testimonial__header {
 	display: flex;
@@ -881,6 +887,10 @@ img {
 
 .swiper .swiper-pagination-testimonials {
 	bottom: 0;
+}
+
+.swiper-slide {
+	width: 320px;
 }
 
 /* =========== Contact Me =========== */
@@ -1357,6 +1367,10 @@ img {
 
 	.swiper-horizontal > .swiper-pagination-bullets {
 		bottom: -4.5rem;
+	}
+
+	.swiper .swiper-pagination-testimonials {
+		bottom: 0px;
 	}
 
 	.contact__form {
