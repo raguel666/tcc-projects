@@ -50,6 +50,7 @@
 	--mb-0-5: .5rem;
 	--mb-0-75: .75rem;
 	--mb-1: 1rem;
+	--mb-1-25: 1.25rem;
 	--mb-1-5: 1.5rem;
 	--mb-2: 2rem;
 	--mb-2-5: 2.5rem;
@@ -1193,7 +1194,7 @@ img {
 /* =========== Media Queries =========== */
 
 /* - Small Devices - */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 320px) {
 	/* General Styles */
 	.container {
 		margin-left: var(--mb-1);
@@ -1262,6 +1263,12 @@ img {
 	.testimonial__description {
 		text-align: center;
 	}
+
+	/* Card Styles */
+	.card__content {
+		padding: 2rem 1.25rem;
+		border-radius: 1rem;
+	}
 }
 /* - Medium Devices - */
 @media screen and (min-width: 568px) {
@@ -1293,6 +1300,19 @@ img {
 		grid-template-columns: .6fr;
 		justify-content: center;
 	}
+
+	/* Card Styles */
+	.card__container {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.card__content {
+		grid-template-rows: repeat(2, max-content);
+	}
+
+	.card__button {
+		align-self: flex-end;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -1310,6 +1330,11 @@ img {
 	}
 
 	.container {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.container__large {
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -1477,7 +1502,7 @@ img {
 }
 
 /* - Large Devices - */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 968px) {
 	/* General styles */
 	.header,
 	.main,
@@ -1523,6 +1548,30 @@ img {
 	.swiper .swiper-pagination-testimonials {
 		bottom: 0px;
 	}
+
+	/* Card Styles */
+	.card {
+		height: 100vh;
+		align-items: center;
+	}
+
+	.card__container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.card__header-circle {
+		margin-bottom: var(--mb-1-25);
+	}
+
+	.card__header-subtitle {
+		font-size: var(--small-font-size);
+	}
+
+	.card__pricing::after {
+		height: 8px;
+	}
+
+	/* Contact Styles */
 
 	.contact__form {
 		width: 460px;
