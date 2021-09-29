@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+	--header-height: 3rem;
+
+	/* =========== Colours =========== */
+	--hue-color: 230; /* Purple 250 - Green 142 - Greem/Blue 165 - Blue 230 - Pink 340 - Yellow 60 */
+
+	/* =========== HSL Colour Mode =========== */
+	--first-color: hsl(var(--hue-color), 69%, 61%);
+	--first-color-second: hsl(var(--hue-color), 69%, 61%);
+	--first-color-alt: hsl(var(--hue-color), 57%, 53%);
+	--first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+	--title-color: hsl(var(--hue-color), 8%, 15%);
+	--text-color: hsl(var(--hue-color), 8%, 45%);
+	--text-color-light: hsl(var(--hue-color), 8%, 65%);
+	--input-color: hsl(var(--hue-color), 70%, 96%);
+	--body-color: hsl(var(--hue-color), 60%, 99%);
+	--container-color: #fff;
+	--white-color: #fff;
+	--dark-color: #0e1026;
+	--scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+	--scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+	/* =========== Font and Typgraphy =========== */
+
+	--body-font: 'Poppins', sans-serif;
+	--pricing-font: 'Lato', sans-serif;
+
+	/* =========== .6rem = 8px, 1rem = 16px, 1.5 = 24px ... =========== */
+
+	--big-font-size: 2rem;
+	--biggest-font-size: 1.75rem;
+	--h1-font-size: 1.5rem;
+	--h2-font-size: 1.25rem;
+	--h3-font-size: 1.125rem;
+	--normal-font-size: .938rem;
+	--small-font-size: .813rem;
+	--smaller-font-size: .75rem;
+	--tiny-font-size: .625rem;
+
+	/* =========== Font Weight =========== */
+
+	--font-medium: 500;
+	--font-semi-bold: 600;
+
+	/* =========== Margins =========== */
+	/* =========== .25rem = 4px, .5rem = 8px, .75rem = 12px ... =========== */
+
+	--mb-0-25: .25rem;
+	--mb-0-5: .5rem;
+	--mb-0-75: .75rem;
+	--mb-1: 1rem;
+	--mb-1-25: 1.25rem;
+	--mb-1-5: 1.5rem;
+	--mb-2: 2rem;
+	--mb-2-5: 2.5rem;
+	--mb-3: 3rem;
+
+	/* =========== Paddings =========== */
+	/* =========== .25rem = 4px, .5rem = 8px, .75rem = 12px ... =========== */
+	--pd-0-25: .25rem;
+	--pd-0-5: .5rem;
+	--pd-0-75: .75rem;
+	--pd-1: 1rem;
+	--pd-1-25: 1.25rem;
+	--pd-1-5: 1.5rem;
+	--pd-2: 2rem;
+	--pd-2-5: 2.5rem;
+	--pd-3: 3rem;
+
+	/* =========== Z Index =========== */
+
+	--z-tooltip: 10;
+	--z-fixed: 100;
+	--z-modal: 1000;
+
+	/* =========== Nav Alt=========== */
+	--header-height: 3rem;
+	--nav-name-font-size: 1.5rem;
+}
+
+/* =========== Font Size for Large Screen (E.G Tablets/iPads) =========== */
+
+@media screen and (min-width: 968px) {
+	:root {
+		--biggest-font-size: 2.125rem;
+		--big-font-size: 3rem;
+		--h1-font-size: 2.25rem;
+		--h2-font-size: 1.5rem;
+		--h3-font-size: 1.25rem;
+		--normal-font-size: 1rem;
+		--small-font-size: .875rem;
+		--smaller-font-size: .813rem;
+		--tiny-font-size: .688rem;
+	}
+}
+
+/* =========== Base =========== */
+
+*::before,
+::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: var(--header-height) 0 0 0;
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
+	font-weight: 600;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* =========== Nav Alt =========== */
+.bd-grid {
+	max-width: 1024px;
+	display: grid;
+	grid-template-columns: 100%;
+	margin-left: 1.5rem;
+	margin-right: 1.5rem;
+}
+
+.header-alt {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: var(--header-height);
+	padding: 0 1rem;
+	background-color: var(--body-color);
+	z-index: var(--z-fixed);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo {
+	color: var(--dark-color);
+}
+
+.header__toggle {
+	font-size: 1.7rem;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+	.nav-alt {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		background-color: var(--first-color);
+		width: 80%;
+		height: 100vh;
+		padding: 2rem 0;
+		z-index: var(--z-fixed);
+		transition: .5s;
+		overflow: auto;
+	}
+}
+
+.nav__content {
+	display: flex;
+	flex-direction: column;
+}
+
+.nav__perfil {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.nav__img {
+	display: flex;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-bottom: 1rem;
+}
+
+.nav__img img {
+	width: 70px;
+}
+
+.nav__name {
+	display: block;
+	font-size: var(--nav-name-font-size);
+	color: var(--white-color);
+}
+
+.nav__item {
+	margin-bottom: 2rem;
+}
+
+.nav__link {
+	color: var(--first-color-lighter);
+}
+
+.nav__link:hover {
+	color: var(--first-color-lighter);
+}
+
+/* Show Menu */
+.show {
+	left: 0;
+}
+
+/* Active Link */
+.active {
+	color: var(--first-color-lighter);
+}
+
+/* Dropdown */
+
+.dropdown__link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.dropdown__icon {
+	font-size: 1.3rem;
+	transition: .5s;
+}
+
+.dropdown__menu {
+	margin: 1rem 0 0 1rem;
+	display: none;
+}
+
+.dropdown__item {
+	margin: 1rem 0;
+}
+
+.dropdown:hover > .dropdown__menu {
+	display: block;
+}
+
+.dropdown:hover .dropdown__icon {
+	transform: rotate(180deg);
+}
+
+/* Media Queries */
+@media screen and (min-width: 576px) {
+	.nav-alt {
+		width: 288px;
+	}
+}
+
+@media screen and (min-width: 769px) {
+	body {
+		margin: 0;
+	}
+
+	.header-alt {
+		height: calc(var(--header-height) + 1rem);
+	}
+
+	.header__logo,
+	.header__toggle {
+		display: none;
+	}
+
+	.nav-alt {
+		width: 100%;
+	}
+
+	.nav__content {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.nav__perfil {
+		flex-direction: row;
+		text-align: initial;
+		margin-bottom: 0;
+	}
+
+	.nav__img {
+		width: 40px;
+		height: 40px;
+		margin-right: .5rem;
+		margin-bottom: 0;
+	}
+
+	.nav__img img {
+		width: 46px;
+	}
+
+	.nav__name {
+		color: var(--dark-color);
+	}
+
+	.nav__list {
+		display: flex;
+		align-items: center;
+	}
+
+	.nav__item {
+		margin: 0 1.5rem;
+		padding: 1.4rem 0;
+	}
+
+	.nav__link {
+		color: var(--dark-color);
+	}
+
+	.nav__link:hover {
+		color: var(--first-color);
+	}
+
+	.active {
+		color: var(--first-color);
+	}
+
+	.dropdown {
+		position: relative;
+	}
+
+	.dropdown__menu {
+		position: fixed;
+		margin: 0;
+		top: calc(car(--header-height) + 1rem);
+		padding: .5rem 1.5rem;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		border-radius: .5rem;
+	}
+
+	.dropdown__item {
+		margin: .5rem 0;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.bg-grid {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
