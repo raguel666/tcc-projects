@@ -15,7 +15,6 @@ if (navClose) {
         navMenu.classList.remove('show-menu')
     });
 }
-
 /* =========== Remove Mobile Menu When Links Are Clicked =========== */
 const navLink = document.querySelectorAll('.nav__link')
 
@@ -109,21 +108,23 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
 /* =========== Testimonials =========== */
 let swiperTestimonials = new Swiper('.testimonial__container', {
     effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-          dynamicBullets: true
-        },
+    effect: "cube",
+    grabCursor: true,
+    // autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false,
+    // },
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 20,
+      shadowScale: 0.94,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true
+    },
   });
 
 /* =========== Scroll Sections Active Link =========== */
