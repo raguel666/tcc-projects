@@ -1,28 +1,29 @@
-/* =========== Show Menu (Y-Axis) If Hidden =========== */
-const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
-/* =========== Show Menu =========== */
-if (navToggle) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu')
-    });
+/*==================== SHOW NAVBAR ====================*/
+const showMenu = (headerToggle, navbarId) => {
+    const toggleBtn = document.getElementById(headerToggle),
+    nav = document.getElementById(navbarId)
+    
+    // Validate that variables exist
+    if(headerToggle && navbarId){
+        toggleBtn.addEventListener('click', () => {
+            // We add the show-menu class to the div tag with the nav__menu class
+            nav.classList.toggle('show-menu')
+            // change icon
+            toggleBtn.classList.toggle('uil-times')
+        })
+    }
+}
+showMenu('header-toggle','navbar')
+
+/*==================== LINK ACTIVE ====================*/
+const linkColor = document.querySelectorAll('.nav__link')
+
+function colorLink(){
+    linkColor.forEach(l => l.classList.remove('active'))
+    this.classList.add('active')
 }
 
-/* =========== Hide Menu =========== */
-if (navClose) {
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu')
-    });
-}
-/* =========== Remove Mobile Menu When Links Are Clicked =========== */
-const navLink = document.querySelectorAll('.nav__link')
-
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach( n => n.addEventListener('click', linkAction))
+linkColor.forEach(l => l.addEventListener('click', colorLink))
 
 /* =========== Skills Accordion =========== */
 const skillsContent = document.getElementsByClassName('skills__content'),
@@ -148,12 +149,12 @@ let swiperTestimonials = new Swiper('.testimonial__container', {
 // window.addEventListener('scroll', scrollActive)
 
 /* =========== Add Scroll Header (Adds class which adds shadow) =========== */
-function scrollHeader(){
-    const nav = document.getElementById('header')
-    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
+// function scrollHeader(){
+//     const nav = document.getElementById('header')
+//     // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+//     if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+// }
+// window.addEventListener('scroll', scrollHeader)
 
 /* =========== Show Scroll To Top =========== */
 function scrollUp(){
