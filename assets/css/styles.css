@@ -75,6 +75,7 @@
 	/* =========== Z Index =========== */
 
 	--z-tooltip: 10;
+	--z-gdpr: 50;
 	--z-fixed: 100;
 	--z-modal: 1000;
 
@@ -111,6 +112,7 @@ body.dark-theme {
 	--scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
 	--scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 	--alt-background-color: hsl(var(--hue-color), 63%, 59%);
+	transition: ease-in-out .5s;
 }
 
 /* =========== Button Light/Dark Themes =========== */
@@ -129,6 +131,43 @@ body.dark-theme {
 .change-theme:hover {
 	color: var(--first-color);
 }
+
+/* =========== GDPR Consent Popup =========== */
+#consent-popup {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1rem 0 1.5rem;
+	background-color: var(--first-color-second);
+	opacity: 1;
+	z-index: var(--z-gdpr);
+	transition: .8s;
+}
+
+.gdpr__container {
+	row-gap: 3rem;
+}
+
+.gdpr__content {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gdpr__data {
+	color: var(--white-color);
+	text-align: center;
+}
+
+.gdpr__buttons {
+	display: flex;
+	justify-content: center;
+}
+
+.hidden {
+	display: none;
+}
+
 /* =========== Base CSS Code =========== */
 
 * {
@@ -235,6 +274,8 @@ img {
 }
 
 .header__img {
+	display: flex;
+	align-items: center;
 	width: 35px;
 	height: 35px;
 	border-radius: 50%;
@@ -529,6 +570,21 @@ img {
 }
 
 .button:hover {
+	background-color: var(--first-color-alt);
+}
+
+.button__gdpr {
+	display: inline-block;
+	background-color: var(--first-color);
+	color: var(--white-color);
+	padding: .5rem;
+	border-radius: .5rem;
+	font-weight: var(--smaller-font-size);
+	margin: .5rem;
+	border: 2px solid var(--white-color);
+}
+
+.button__gdpr:hover {
 	background-color: var(--first-color-alt);
 }
 
@@ -1000,7 +1056,7 @@ img {
 }
 
 .project__img {
-	width: 232px;
+	width: 320px;
 	justify-self: center;
 }
 
@@ -1483,7 +1539,7 @@ img {
 @media screen and (min-width: 768px) {
 	/* General Styling */
 	body {
-		padding: 1rem 3rem 0 6rem;
+		padding: 1rem 0rem 0 4rem;
 	}
 
 	.section {
@@ -1526,14 +1582,21 @@ img {
 		display: block;
 	}
 	.header__img {
-		width: 40px;
-		height: 40px;
+		display: flex;
+		align-items: center;
+		width: 35px;
+		height: 35px;
 		order: 1;
 	}
 
 	.main,
 	.footer__container {
 		padding: 0 1rem;
+	}
+	/* GDPR Styling */
+	.gdpr__content {
+		margin-left: 4.25rem;
+		margin-right: 0;
 	}
 
 	/* Nav Styles */
@@ -1709,23 +1772,36 @@ img {
 /* - Large Devices - */
 @media screen and (min-width: 1024px) {
 	/* General styles */
+	.section {
+		padding: 2rem 0 4rem;
+	}
+
 	.main,
 	.footer__container {
 		padding: 0;
 	}
 
 	/* Home Styles */
-	.home__blob {
-		width: 320px;
+	.home__content {
+		grid-template-columns: max-content 1fr 1.25fr;
+	}
+
+	.home__img {
+		width: 500px;
 	}
 
 	.home__social {
-		transform: translateX(-6rem);
+		transform: translateX(.5rem);
+	}
+
+	/* About Styles */
+	.about__img {
+		width: 475px;
 	}
 
 	/* Services Styles */
 	.services__container {
-		grid-template-columns: repeat(3, 238px);
+		grid-template-columns: repeat(3, 280px);
 	}
 
 	/* Portfolio Styles */
@@ -1783,5 +1859,12 @@ img {
 
 	.contact__inputs {
 		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 1324px) {
+	/* Home Styles */
+	.home__social {
+		transform: translateX(-6rem);
 	}
 }

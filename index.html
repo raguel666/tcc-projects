@@ -21,14 +21,15 @@
 
     <header class="header">
         <div class="header__container">
-            <img src="assets/img/perfil.jpg" alt="" class="header__img">
+                <!-- Theme change button  -->
+                <i class="uil uil-moon change-theme header__img" id="theme-button"></i>
 
             <a href="#" class="header__logo">TCC Consultants</a>
 
-            <div class="header__search">
+            <!-- <div class="header__search">
                 <input type="search" placeholder="Search" class="header__input">
                 <i class="bx bx-search header__icon"></i>
-            </div>
+            </div> -->
 
             <div class="header__toggle">
                 <i class="uil uil-bars" id="header-toggle"></i>
@@ -41,7 +42,7 @@
             <div>
                 <a href="#" class="nav__link nav__logo">
                     <i class="uil uil-moonset nav__icon" ></i>
-                    <span class="nav__logo-name">Light/Dark Mode</span>
+                    <span class="nav__logo-name">Welcome</span>
                 </a>
 
                 <div class="nav__list">
@@ -67,26 +68,10 @@
                     <div class="nav__items">
                         <h3 class="nav__subtitle">Website Development</h3>
 
-                        <a href="#" class="nav__link active">
+                        <a href="#" class="nav__link">
                             <i class="uil uil-palette nav__icon" ></i>
                             <span class="nav__name">Website Design</span>
                         </a>
-                        
-                        <!-- <div class="nav__dropdown">
-                            <a href="#" class="nav__link">
-                                <i class="bx bx-user nav__icon" ></i>
-                                <span class="nav__name">Profile</span>
-                                <i class="uil uil-angle-down nav__icon nav__dropdown-icon"></i>
-                            </a>
-
-                            <div class="nav__dropdown-collapse">
-                                <div class="nav__dropdown-content">
-                                    <a href="#" class="nav__dropdown-item">Passwords</a>
-                                    <a href="#" class="nav__dropdown-item">Mail</a>
-                                    <a href="#" class="nav__dropdown-item">Accounts</a>
-                                </div>
-                            </div>
-                        </div> -->
 
                         <a href="#" class="nav__link">
                             <i class="uil uil-arrow nav__icon" ></i>
@@ -124,10 +109,9 @@
 
 
 
-            <a href="#" class="nav__link nav__logout">
-                <!-- Theme change button  -->
-            <i class="uil uil-moon change-theme nav__name nav__item" id="theme-button"> Change Theme</i>
-            </a>
+            <!-- <a href="#" class="nav__link nav__logout">
+            <i class="uil uil-user nav__name nav__item" id="theme-button"> Change Theme</i>
+            </a> -->
         </nav>
     </div>
 
@@ -162,11 +146,12 @@
                         <img class="home__img" src="assets/images/hero-img-2.svg" alt="">
                     </div>
                     <div class="home__data">
-                        <h1 class="home__title">Welcome to TCC Consultants</h1>
-                        <h3 class="home__subtitle">Website Development &amp; Construction</h3>
+                        <h1 class="home__title">TCC Consultants</h1>
+                        <h3 class="home__subtitle">Website Development &amp; Construction Services</h3>
                         <p class="home__description">
-                            High level experience in web design and a strong knowledge 
-                            base to produce quality work
+                            Welcome to TCC Consultants Limited. We provide a variety of 
+                            website design &amp; development services alongside our 
+                            construction services!
                         </p>
                         <a href="#contact" class="button button--flex">
                             Contact Me <i class="uil uil-message button__icon"></i>
@@ -186,396 +171,34 @@
         <!-- =========== About =========== -->
         <section class="about section" id="about">
             <h2 class="section__title">About Us</h2>
-            <span class="section__subtitle">My Introduction</span>
+            <span class="section__subtitle">Who Are We?</span>
 
-            <div class="about__container container grid">
-                <img src="assets/images/about.jpg" alt="the about us image" class="about__img">
+            <div class="about__container container__large grid">
+                <img src="assets/images/about-us-graphics/our-team.svg" alt="the about us image" class="about__img">
 
                 <div class="about__data">
                     <p class="about__description">
-                        I am a web developer with extensive knowledge and years of experience working with 
-                        technologies and UI/UX design to deliver quality work
+                        TCC Consultants is a small business providing a wide variety of services 
+                        across the UK. Being a fairly new business we aim to help small businesses 
+                        maintain a strong presence on the web and thrive to their fullest extent!
                     </p>
 
-                    <div class="about__info">
-                        <div>
-                            <span class="about__info-title">02+</span>
-                            <span class="about__info-name">Years <br> Experience</span>
-                        </div>
-                        <div>
-                            <span class="about__info-title">20+</span>
-                            <span class="about__info-name">Completed <br> Projects</span>
-                        </div>
-                        <div>
-                            <span class="about__info-title">05+</span>
-                            <span class="about__info-name"> Companies<br> Worked At</span>
-                        </div>
-                    </div> 
-                    <div class="about__buttons">
-                        <a download="" href="assets/pdf/CV-Aaron-Robinson-06-05-2021.pdf" class="button button--flex">
-                            Download CV <i class="uil uil-file-download button__icon"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- =========== Skills =========== -->
-        <section class="skills section" id="skills">
-            <h2 class="section__title">Skills</h2>
-            <span class="section__subtitle">My Technical Level</span>
-
-            <div class="skills__container container grid">
-                <div>
-                    <!-- =========== 1st Set of Skills =========== -->
-                    <div class="skills__content skills__open">
-                        <div class="skills__header">
-                            <i class="uil uil-brackets-curly skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__titles">Frontend Development</h1>
-                                <span class="skills__subtitle">More than 2 years</span>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">HTML5</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills___bar">
-                                    <span class="skills__percentage skills__html"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">CSS3</h3>
-                                    <span class="skills__number">80%</span>
-                                </div>
-                                <div class="skills___bar">
-                                    <span class="skills__percentage skills__css"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">JavaScript</h3>
-                                    <span class="skills__number">60%</span>
-                                </div>
-                                <div class="skills___bar">
-                                    <span class="skills__percentage skills__js"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">React</h3>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills___bar">
-                                    <span class="skills__percentage skills__react"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- =========== 2nd Set of Skills =========== -->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-server skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__titles">Backend Development</h1>
-                                <span class="skills__subtitle">More than 2 years</span>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">PHP</h3>
-                                    <span class="skills__number">50%</span>
-                                </div>
-                                <div class="skills___bar">
-                                    <span class="skills__percentage skills__php"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Node JS</h3>
-                                    <span class="skills__number">75%</span>
-                                </div>
-                                <div class="skills___bar">
-                                    <span class="skills__percentage skills__node"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Firebase</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills___bar">
-                                    <span class="skills__percentage skills__firebase"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Python</h3>
-                                    <span class="skills__number">20%</span>
-                                </div>
-                                <div class="skills___bar">
-                                    <span class="skills__percentage skills__python"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <!-- =========== 3rd Set of Skills =========== -->
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="uil uil-swatchbook skills__icon"></i>
-
-                            <div>
-                                <h1 class="skills__titles">Graphic Design</h1>
-                                <span class="skills__subtitle">More than 2 years</span>
-                            </div>
-
-                            <i class="uil uil-angle-down skills__arrow"></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Figma</h3>
-                                    <span class="skills__number">50%</span>
-                                </div>
-                                <div class="skills___bar">
-                                    <span class="skills__percentage skills__figma"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Procreate</h3>
-                                    <span class="skills__number">50%</span>
-                                </div>
-                                <div class="skills___bar">
-                                    <span class="skills__percentage skills__procreate"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Photoshop</h3>
-                                    <span class="skills__number">70%</span>
-                                </div>
-                                <div class="skills___bar">
-                                    <span class="skills__percentage skills__photoshop"></span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-        <!-- =========== Qualifications =========== -->
-        <section class="qualification section">
-            <h2 class="section__title">Qualifications</h2>
-            <span class="section__subtitle">Our Journey</span>
-
-            <div class="qualification__container container">
-                <div class="qualification__tabs">
-                    <div class="qualification__button button--flex qualification__active" data-target="#education">
-                        <i class="uil uil-graduation-cap qualification__icon"></i>
-                        Education
-                    </div>
-
-                    <div class="qualification__button button--flex" data-target="#work">
-                        <i class="uil uil-briefcase-alt qualification__icon"></i>
-                        Work
-                    </div>
-                </div>
-                <!-- Qualifications Section-->
-                <div class="qualification__sections">
-                    
-                    <!-- =========== Qualifications Content - My Qualifications =========== -->
-                    <div class="qualification__content qualification__active" data-content id="education">
-                        <!-- =========== 1st Qualification =========== -->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Bsc Computer Science</h3>
-                                <span class="qualification__subtitle">University of Cumbria</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i> 
-                                    2016-2017
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <!-- =========== 2nd Qualification =========== -->
-                        <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">HND in Computer Science</h3>
-                                <span class="qualification__subtitle">Lakes College West Cumbria</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i> 
-                                    2014-2016
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- =========== 3rd Qualification =========== -->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Level 3 in Computer Science</h3>
-                                <span class="qualification__subtitle">Lakes College West Cumbria</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i> 
-                                    2012-2014
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <!-- =========== 4th Qualification =========== -->
-                        <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <!-- <span class="qualification__line"></span> -->
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">Colt Steele's Web Dev Bootcamp (CPD)</h3>
-                                <span class="qualification__subtitle">Udemy</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i> 
-                                    2020 Ongoing
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                    <!-- =========== Qualifications Content - Work Experience =========== -->
-                    <div class="qualification__content" data-content id="work">
-                        <!-- =========== 1st Qualification =========== -->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">Angela Yu's Web Development Bootcamp (CPD)</h3>
-                                <span class="qualification__subtitle">Udemy</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i> 
-                                    2020 Ongoing
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                            <!-- =========== 2nd Qualification =========== -->
-                        <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">100 Days of Code (Python - CPD)</h3>
-                                <span class="qualification__subtitle">Udemy</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i> 
-                                    2020 Ongoing
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- =========== 3rd Qualification =========== -->
-                        <div class="qualification__data">
-                            <div>
-                                <h3 class="qualification__title">WordPress Development (CPD)</h3>
-                                <span class="qualification__subtitle">Udemy</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i> 
-                                    2020 Ongoing
-                                </div>
-                            </div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <span class="qualification__line"></span>
-                            </div>
-                        </div>
-
-                        <!-- =========== 4th Qualification =========== -->
-                        <div class="qualification__data">
-                            <div></div>
-
-                            <div>
-                                <span class="qualification__rounder"></span>
-                                <!-- <span class="qualification__line"></span> -->
-                            </div>
-
-                            <div>
-                                <h3 class="qualification__title">E-Commerce WordPress Development (CPD)</h3>
-                                <span class="qualification__subtitle">Udemy</span>
-                                <div class="qualification__calendar">
-                                    <i class="uil uil-calendar-alt"></i> 
-                                    2020 Ongoing
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
+                    <p class="about__description">
+                        Whilst we are a fairly new business, we have been developing websites for 
+                        over two years now. With a strong understanding of key web technologies, we 
+                        can develop a range of products that would help your business thrive in todays world!
+                    </p>
 
                 </div>
             </div>
         </section>
+
         <!-- =========== Services =========== -->
         <section class="services section" id="services">
             <h2 class="section__title">Our Services</h2>
             <span class="section__subtitle">What we Offer</span>
 
-            <div class="services__container container grid">
+            <div class="services__container container__large grid">
                 <!-- =========== Services 1 =========== -->
                 <div class="services__content">
                     <div>
@@ -695,76 +318,11 @@
             </div>
         </section>
     
-        <!-- =========== Portfolio =========== -->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section__title">Our Portfolio</h2>
-            <span class="section__subtitle">Our Most Recent Work</span>
-
-            <div class="portfolio__container container swiper">
-                <div class="swiper-wrapper">
-                    <!-- =========== Portfolio 1 =========== -->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/images/about.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Modern Website Example</h3>
-                            <p class="portfolio__description">
-                                A website adaptable to all devices with animated interactions.
-                            </p>
-                            <a href="#" class="button button--flex button--small portfolio__button">
-                                DEMO 
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                        <!-- =========== Portfolio 2 =========== -->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/images/about.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Brand Design</h3>
-                            <p class="portfolio__description">
-                                A website adaptable to all devices with animated interactions.
-                            </p>
-                            <a href="#" class="button button--flex button--small portfolio__button">
-                                DEMO 
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- =========== Portfolio 3 =========== -->
-                    <div class="portfolio__content grid swiper-slide">
-                        <img src="assets/images/about.jpg" alt="" class="portfolio__img">
-
-                        <div class="portfolio__data">
-                            <h3 class="portfolio__title">Online Store</h3>
-                            <p class="portfolio__description">
-                                A website adaptable to all devices with animated interactions.
-                            </p>
-                            <a href="#" class="button button--flex button--small portfolio__button">
-                                DEMO 
-                                <i class="uil uil-arrow-right button__icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Add Arrows -->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
 
         <!-- =========== Project in Mind =========== -->
         <section class="project section">
             <div class="project__bg">
-                <div class="project__container container grid">
+                <div class="project__container container__large grid">
                     <div class="project__data">
                         <h2 class="project__title">Got a Project in Mind?</h2>
                         <p class="project__description">
@@ -776,7 +334,7 @@
                         </a>
                     </div>
 
-                    <img src="assets/images/project.png" alt="" class="project__img">
+                    <img src="assets/images/project.svg" alt="" class="project__img">
                 </div>
             </div>
         </section>
@@ -983,6 +541,27 @@
         <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
 
+    <!-- =========== GDPR Banner =========== -->
+        <div id="consent-popup" class="gdpr__container container__full grid hidden">
+            <div class="gdpr__content">
+                    <div class="gdpr__data">
+                        <p>
+                            By using this site you agree to our <a href="#">terms and conditions</a>. 
+                            <br>
+                            Please note that we only use basic &amp; necassary cookies for this site. 
+                            If you would like more information then <a href="#">click here</a>
+                        </p>
+                    </div>
+                    
+
+                    <div class="gdpr__buttons">
+                        <a href="#" id="accept" class="button__gdpr button--flex">Accept <i class="uil uil-check button__icon"></i></a>
+                        <a href="https://www.google.co.uk" class="button__gdpr button--flex">Deny <i class="uil uil-times button__icon"></i></a>
+                </div>
+            </div>
+            
+            
+        </div>
     <!-- =========== Swiper =========== -->
     <script src="assets/js/swiper/swiper-bundle.min.js"></script>
 
