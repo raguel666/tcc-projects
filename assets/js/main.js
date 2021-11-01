@@ -2,10 +2,10 @@
 // Map each cookie insude of the cookie string
 const cookieStorage = {
     getItem: (item) => {
-        const cookies = document.cookie 
+        const cookies = document.cookie
             .split(';')
             .map(cookie => cookie.split('='))
-            .reduce((acc, [key, value]) => ({...acc, [key.trim()]: value }), {}) ;
+            .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
         return cookies[item];
     },
     setItem: (item, value) => {
@@ -13,6 +13,7 @@ const cookieStorage = {
     }
 }
 
+// Dictates the storage type and the name that it's stored under
 const storageType = cookieStorage;
 const consentPropertyName = 'tcc_consent';
 
@@ -21,24 +22,23 @@ const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
 const saveToStorage = () => storageType.setItem(consentPropertyName, true);
 
 window.onload = () => {
-    const consentPopup = document.getElementById('consent-popup');
-    const acceptBtn = document.getElementById('accept');
 
     const acceptFn = event => {
         saveToStorage(storageType);
-        consentPopup.classList.add('hidden');
-    };
+        consentPopup.classList.add('gdpr__hidden');
+    }
 
+    // Fetches elements by ID and adds event listener saying (If accept button is clicked, store cookie and add hidden class)
+    const consentPopup = document.getElementById('consent-popup');
+    const acceptBtn = document.getElementById('accept');
     acceptBtn.addEventListener('click', acceptFn);
-
-
 
     if (shouldShowPopup(storageType)) {
         setTimeout(() => {
-            consentPopup.classList.remove('hidden');
+            consentPopup.classList.remove('gdpr__hidden');
         }, 2000);
-        
     }
+
 };
 
 /*==================== SHOW NAVBAR ====================*/

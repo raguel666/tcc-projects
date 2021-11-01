@@ -132,42 +132,6 @@ body.dark-theme {
 	color: var(--first-color);
 }
 
-/* =========== GDPR Consent Popup =========== */
-#consent-popup {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	padding: 1rem 0 1.5rem;
-	background-color: var(--first-color-second);
-	opacity: 1;
-	z-index: var(--z-gdpr);
-	transition: .8s;
-}
-
-.gdpr__container {
-	row-gap: 3rem;
-}
-
-.gdpr__content {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.gdpr__data {
-	color: var(--white-color);
-	text-align: center;
-}
-
-.gdpr__buttons {
-	display: flex;
-	justify-content: center;
-}
-
-.hidden {
-	display: none;
-}
-
 /* =========== Base CSS Code =========== */
 
 * {
@@ -194,10 +158,26 @@ h3,
 h4 {
 	color: var(--title-color);
 	font-weight: var(--font-semi-bold);
+	text-transform: capitalize;
 }
 
 ul {
+	margin: 0;
 	list-style: none;
+}
+
+ul.list__container {
+	margin-bottom: var(--mb-1-25);
+	list-style-type: none;
+}
+
+ul.list__container > .list__data {
+	text-indent: -5px;
+}
+
+ul.list__container > .list__data:before {
+	content: "-";
+	text-indent: -5px;
 }
 
 a {
@@ -314,6 +294,42 @@ img {
 .header__toggle {
 	color: var(--title-color);
 	cursor: pointer;
+}
+
+/* =========== GDPR Consent Popup =========== */
+#consent-popup {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1rem 0 1.5rem;
+	background-color: var(--first-color-second);
+	opacity: 1;
+	z-index: var(--z-gdpr);
+	transition: .8s ease;
+}
+
+.gdpr__container {
+	row-gap: 3rem;
+}
+
+.gdpr__content {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gdpr__data {
+	color: var(--white-color);
+	text-align: center;
+}
+
+.gdpr__buttons {
+	display: flex;
+	justify-content: center;
+}
+
+.gdpr__hidden {
+	display: none;
 }
 
 /* =========== Navbar =========== */
@@ -1295,6 +1311,18 @@ img {
 	border: none;
 	outline: none;
 	padding: .25rem .5rem .5rem 0;
+}
+
+/* =========== Legal Docs Setup (Terms and Conditions, Disclaimer, GDPR Setup) =========== */
+.terms__container {
+}
+
+.terms__data {
+}
+
+.terms__description {
+	text-align: left;
+	margin-bottom: var(--mb-2-5);
 }
 
 /* =========== Footer =========== */
