@@ -112,7 +112,7 @@ body.dark-theme {
 	--scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
 	--scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 	--alt-background-color: hsl(var(--hue-color), 63%, 59%);
-	transition: ease-in-out .5s;
+	transition: ease-in-out .2s;
 }
 
 /* =========== Button Light/Dark Themes =========== */
@@ -172,6 +172,7 @@ ul.list__container {
 }
 
 ul.list__container > .list__data {
+	margin-left: 0.5%;
 	text-indent: -5px;
 }
 
@@ -1315,6 +1316,18 @@ img {
 
 /* =========== Legal Docs Setup (Terms and Conditions, Disclaimer, GDPR Setup) =========== */
 .terms__container {
+}
+
+.advisory__text {
+	background-color: var(--first-color-second);
+	border-radius: 1rem;
+	padding: 2.5rem 2.5rem 2.5rem;
+	text-align: center;
+	color: var(--white-color);
+}
+
+.terms__subtitle {
+	font-size: var(--h2-font-size);
 }
 
 .terms__data {
