@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/swiper/swiper-bundle.min.css">
 
     <!-- =========== CSS =========== --> 
+    <link rel="stylesheet" href="assets/css/nav__styles.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <title>Portfolio Project</title>
@@ -18,58 +19,101 @@
 <body>
     <!-- =========== Header =========== -->
 
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">TCC</a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list grid">
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">
-                            <i class="uil uil-estate nav__icon"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav__link">
-                            <i class="uil uil-user-circle nav__icon"></i> About
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#skills" class="nav__link">
-                            <i class="uil uil-folder nav__icon"></i> Skills
-                        </a>
-                    </li>
-                        
-                    <li class="nav-item">
-                        <a href="#services" class="nav__link">
-                            <i class="uil uil-briefcase nav__icon"></i> Services
-                        </a>
-                    </li>
-                        
-                    <li class="nav-item">
-                        <a href="#portfolio" class="nav__link">
-                            <i class="uil uil-scenery nav__icon"></i> Portfolio
-                        </a>
-                    </li>
-                        
-                    <li class="nav-item">
-                        <a href="#contact" class="nav__link">
-                            <i class="uil uil-message nav__icon"></i> Contact Me
-                        </a>
-                    </li>
-                        
-                </ul>
-                <i class="uil uil-times-square nav__close" id="nav-close"></i>
-            </div>
-
-            <div class="nav__btns">
+    <header class="header">
+        <div class="header__container">
                 <!-- Theme change button  -->
-                <i class="uil uil-moon change-theme" id="theme-button"></i>
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="uil uil-apps"></i>
+                <i class="uil uil-moon change-theme header__img" id="theme-button"></i>
+
+            <a href="#" class="header__logo">TCC Consultants</a>
+
+            <!-- <div class="header__search">
+                <input type="search" placeholder="Search" class="header__input">
+                <i class="bx bx-search header__icon"></i>
+            </div> -->
+
+            <div class="header__toggle">
+                <i class="uil uil-bars" id="header-toggle"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav" id="navbar">
+        <nav class="nav__container">
+            <div>
+                <a href="#" class="nav__link nav__logo">
+                    <i class="uil uil-moonset nav__icon" ></i>
+                    <span class="nav__logo-name">Welcome</span>
+                </a>
+
+                <div class="nav__list">
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Welcome</h3>
+                        <a href="assets/Alt Nav Bar Styled/nav_home.html" class="nav__link active">
+                            <i class="uil uil-estate nav__icon" ></i>
+                            <span class="nav__name">Home</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class="uil uil-users-alt nav__icon" ></i>
+                            <span class="nav__name">About Us</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class="uil uil-envelope-send nav__icon" ></i>
+                            <span class="nav__name">Contact Us</span>
+                        </a>
+                    </div>
+
+                <div class="nav__list">
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Website Development</h3>
+
+                        <a href="#" class="nav__link">
+                            <i class="uil uil-palette nav__icon" ></i>
+                            <span class="nav__name">Website Design</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class="uil uil-arrow nav__icon" ></i>
+                            <span class="nav__name">Dynamic Websites</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class="uil uil-credit-card nav__icon" ></i>
+                            <span class="nav__name">E-Commerce Websites</span>
+                        </a>
+                    </div>
+
+                    <div class="nav__items">
+                        <h3 class="nav__subtitle">Construction</h3>
+
+                        <div class="nav__dropdown">
+                            <a href="#" class="nav__link">
+                                <i class="uil uil-diary nav__icon" ></i>
+                                <span class="nav__name">Our Services</span>
+                                <i class="uil uil-angle-down nav__icon nav__dropdown-icon"></i>
+                            </a>
+
+                            <div class="nav__dropdown-collapse">
+                                <div class="nav__dropdown-content">
+                                    <a href="#" class="nav__dropdown-item">Strategic Management</a>
+                                    <a href="#" class="nav__dropdown-item">Procurement</a>
+                                    <a href="#" class="nav__dropdown-item">Securing Work</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
+
+            <!-- <a href="#" class="nav__link nav__logout">
+            <i class="uil uil-user nav__name nav__item" id="theme-button"> Change Theme</i>
+            </a> -->
         </nav>
-    </header>
+    </div>
     
     <!-- =========== Main =========== -->
 
@@ -148,7 +192,7 @@
                         <img src="assets/images/free-coin.png" alt="" class="card__header-img">
                     </div>
 
-                    <span class="card__header-subtitle">Static Website</span>
+                    <span class="card__header-subtitle">Ideal for Sole Traders or Small Businesses</span>
                     <h1 class="card__header-title">Basic</h1>
                 </header>
 
@@ -194,7 +238,7 @@
                         <img src="assets/images/bronze-coin.png" alt="" class="card__header-img">
                     </div>
 
-                    <span class="card__header-subtitle">Ideal for Small Businesses</span>
+                    <span class="card__header-subtitle">Ideal for Small to Medium Businesses</span>
                     <h1 class="card__header-title">Dynamic Sites</h1>
                 </header>
 
